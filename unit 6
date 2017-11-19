@@ -1,0 +1,56 @@
+#include<stdio.h>                                        //problem 1
+    int fly(int a){
+        int b,i;
+        for(i=2;i<=a;i++){
+                          b=a%i;
+                          if(b==0&&i!=a){
+                                         printf("%dx",i);
+                                         a=a/i;
+                                         fly(a);
+                                         break;
+                                         }
+                          if(i==a){
+                          printf("%d",a);
+                          }
+                          }
+        }
+                               
+int main(){
+    int a;
+    scanf("%d",&a);
+    printf("%d=",a);
+    fly(a);
+    return 0;
+          }
+          
+          
+          
+          
+ #include<stdio.h>                                               //problem 2
+int main(){
+    int a,b,c,i,j,t,sum;
+    t=0;
+    scanf("%d %d",&a,&b);
+    for(i=a;i<=b;i++){
+       sum=0;
+       for(j=1;j<i;j++){
+                         c=i%j;
+                         if(c==0){
+                                  sum=sum+j;
+                                  }
+                         }
+    if(sum==i){
+               if(t==0){
+               printf("%d",i);
+               t=t+1;
+               }
+               else{
+               printf(" %d",i);
+               t=t+1;
+               }
+               }
+                      }
+       if(t==0){
+                printf("NIL\n");
+                }
+                }         
