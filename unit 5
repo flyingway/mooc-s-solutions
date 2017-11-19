@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    int i,j,a,b,c,d;
+    scanf("%d/%d",&a,&b);
+    printf("0.");
+    i=0;
+    while(i<200){
+                  a=a*10;
+                  c=a/b;
+                  d=a%b;
+                  printf("%d",c);
+                  if(d==0)
+                  break;
+                  a=d;
+                  i++;
+                  }
+    printf("\n"); 
+    }
