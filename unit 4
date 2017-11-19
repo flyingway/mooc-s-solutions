@@ -1,0 +1,88 @@
+#include <stdio.h>                                                    //problem 1
+int main(){
+    int a,b,c,i,j,n,m,sum;
+    n=1,sum=0,m=0;
+    scanf("%d %d",&a,&b);
+    for(i=1;i<=6000;i++){
+        for(j=2;j<=i;j++){
+        if(i%j==0)
+        break;
+        if(j==i-1){
+        m=i;
+        n=n+1;
+       if(n>=a&&n<=b)
+        sum=sum+m;
+        }
+        }
+        if(n>b)
+        break;
+    }
+    if(a==1)
+    sum=sum+2;
+    printf("%d",sum);
+}
+
+
+
+#include <stdio.h>                                                       //problem 2
+int a[10];
+int main(){
+    int b,c,d,i,j,p,m;
+    scanf("%d",&b);
+    if(b<0){
+            p=-1;
+            b=p*b;
+            }
+    for(i=1;i<=9;i++){
+                      c=b%10;
+                      b=b/10;
+                      if(c!=0){
+                               a[i]=c;
+                               }
+    if(b==0)
+    break;
+                     }
+
+    for(j=9;j>0;j--){
+                     if(a[j]!=0){
+                                 d=j;
+                                 break;
+                                 }
+                     }
+    if(j==0)
+    printf("ling");
+    if(p==-1)
+    printf("fu ");
+    for(m=d;m>0;m--){if(m>1){
+                     switch(a[m]){
+                                  case 0:printf("ling ");break;
+                                  case 1:printf("yi ");break;
+                                  case 2:printf("er ");break;
+                                  case 3:printf("san ");break;
+                                  case 4:printf("si ");break;
+                                  case 5:printf("wu ");break;
+                                  case 6:printf("liu ");break;
+                                  case 7:printf("qi ");break;
+                                  case 8:printf("ba ");break;
+                                  case 9:printf("jiu ");break;
+                                  default:printf("error ");break;
+                                  }
+                              }
+                    if(m==1){                     
+					switch(a[m]){
+                                  case 0:printf("ling");break;
+                                  case 1:printf("yi");break;
+                                  case 2:printf("er");break;
+                                  case 3:printf("san");break;
+                                  case 4:printf("si");break;
+                                  case 5:printf("wu");break;
+                                  case 6:printf("liu");break;
+                                  case 7:printf("qi");break;
+                                  case 8:printf("ba");break;
+                                  case 9:printf("jiu");break;
+                                  default:printf("error");break;
+                                  }
+					}
+                     }
+    return 0;
+}
